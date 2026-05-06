@@ -23,9 +23,22 @@ const contactLimiter = rateLimit({
 });
 
 // Middleware
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.CLIENT_URL
+];
+
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
-  methods: ['GET', 'POST'],
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error('Not allowed by CORS'));
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 }));
 app.use(express.json({ limit: '10kb' }));
