@@ -24,10 +24,15 @@ const contactLimiter = rateLimit({
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
-  methods: ['GET', 'POST'],
+  origin: [
+    'http://localhost:5173',
+    'https://portfolio-sable-kappa-72.vercel.app'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 }));
+
+app.options('*', cors());
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(limiter);
