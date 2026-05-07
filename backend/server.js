@@ -28,7 +28,8 @@ const contactLimiter = rateLimit({
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://portfolio-sable-kappa-72.vercel.app'
+    'https://portfolio-sable-kappa-72.vercel.app',
+    'https://sonusinghmca2024-26.vercel.app'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
