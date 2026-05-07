@@ -29,7 +29,10 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'https://portfolio-sable-kappa-72.vercel.app',
-    'https://sonusinghmca2024-26.vercel.app'
+    'https://sonusinghmca2024-26.vercel.app',
+    "https://sonusingh.me",
+    "https://www.sonusingh.me"
+
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
