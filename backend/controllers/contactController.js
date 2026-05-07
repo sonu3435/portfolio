@@ -51,7 +51,7 @@ const submitContact = async (req, res) => {
         console.log('✅ SMTP server ready');
 
         await transporter.sendMail({
-          from: `"Portfolio" <${process.env.EMAIL_USER}>`,
+          from: `"Portfolio" <sonusinghmca2024@bhu.ac.in>`,
           to: 'sonusinghmca2024@bhu.ac.in',
           subject: `📩 New Contact: ${subject || 'Portfolio Inquiry'} — from ${name}`,
           html: `
