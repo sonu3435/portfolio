@@ -106,6 +106,7 @@
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s;
+  pointer-events: none;
 }
 .animated-border:hover::before {
   opacity: 1;
