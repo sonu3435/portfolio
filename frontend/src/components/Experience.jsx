@@ -6,7 +6,7 @@ const experiences = [
     role: 'Full Stack Developer',
     period: 'July 2025 – February 2026',
     location: 'Varanasi, India (Hybrid)',
-    type: 'Full-time',
+    type: 'Internship',
     color: 'cyber',
     achievements: [
       'Designed and developed 10+ RESTful API endpoints using Node.js and Express.js, powering core features of a web-based mental health platform serving active users.',
